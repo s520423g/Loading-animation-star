@@ -1,0 +1,355 @@
+@keyframes load-run {
+  0% {
+    left: -100%;
+  }
+  80% {
+    left: 0%;
+  }
+  100% {
+    background-color: rgba(240, 153, 157, 0.8352941176);
+    left: 0%;
+  }
+}
+@keyframes witch {
+  80% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes upndown {
+  50% {
+    top: 55%;
+  }
+}
+@keyframes shadow-1 {
+  50% {
+    opacity: 0.8;
+    background-color: rgba(233, 127, 132, 0.4588235294);
+  }
+  65% {
+    background-color: rgba(233, 127, 132, 0.2862745098);
+  }
+}
+@keyframes square-round {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(359deg);
+  }
+}
+@keyframes star-big {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  60% {
+    opacity: 0.2;
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+  80% {
+    opacity: 0.1;
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-6px);
+  }
+  40%, 100% {
+    transform: translateY(0);
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  background: linear-gradient(140deg, #efb5ba, #fef9d7);
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.container .box {
+  background-color: #fce0e2;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0px 0px 20px #dc868b;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: upndown 3s linear 0s infinite;
+}
+.container .box:hover {
+  transform: scale(1.3) translate(-40%, -33%);
+  animation: none;
+  box-shadow: 0px 0px 300px 50px #f7eff0;
+}
+.container .box:hover .square {
+  display: block;
+}
+.container .box:hover .box-in {
+  transform: rotate(1440deg);
+  transition: 7s;
+}
+.container .box:hover .big-star {
+  display: block;
+}
+.container .box .box-in {
+  border: 3px solid #f9c0c4;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.container .box .box-in .line-1 {
+  background-color: #eb8f95;
+  width: 150%;
+  height: 8px;
+  position: absolute;
+  left: -25%;
+  top: 20%;
+  box-shadow: 0px 0px 10px #eb8f95;
+}
+.container .box .box-in .line-2 {
+  background-color: #eb8f95;
+  width: 150%;
+  height: 8px;
+  position: absolute;
+  left: -25%;
+  top: 60%;
+  transform: rotate(-45deg);
+  box-shadow: 0px 0px 10px #eb8f95;
+}
+.container .box .box-in .line-3 {
+  background-color: #eb8f95;
+  width: 150%;
+  height: 8px;
+  position: absolute;
+  left: -25%;
+  top: 60%;
+  transform: rotate(45deg);
+  box-shadow: 0px 0px 10px #eb8f95;
+}
+.container .box .box-in .line-4 {
+  background-color: #eb8f95;
+  width: 150%;
+  height: 8px;
+  position: absolute;
+  left: -45%;
+  top: 60%;
+  transform: rotate(-72deg);
+  box-shadow: 0px 0px 10px #eb8f95;
+}
+.container .box .box-in .line-5 {
+  background-color: #eb8f95;
+  width: 150%;
+  height: 8px;
+  position: absolute;
+  left: -15px;
+  top: 60%;
+  transform: rotate(72deg);
+  box-shadow: 0px 0px 10px #eb8f95;
+}
+.container .box .box-in .line-6 {
+  background-color: #eb8f95;
+  width: 150%;
+  height: 8px;
+  opacity: 0.2;
+  position: absolute;
+  left: -25%;
+  bottom: 20%;
+}
+.container .box .box-in .line-7 {
+  background-color: #eb8f95;
+  width: 150%;
+  height: 8px;
+  opacity: 0.2;
+  position: absolute;
+  left: -25%;
+  bottom: 60%;
+  transform: rotate(-45deg);
+}
+.container .box .box-in .line-8 {
+  background-color: #eb8f95;
+  width: 150%;
+  height: 8px;
+  opacity: 0.2;
+  position: absolute;
+  left: -25%;
+  bottom: 60%;
+  transform: rotate(45deg);
+}
+.container .box .box-in .line-9 {
+  background-color: #eb8f95;
+  width: 150%;
+  height: 8px;
+  opacity: 0.2;
+  position: absolute;
+  right: -45%;
+  bottom: 60%;
+  transform: rotate(-72deg);
+}
+.container .box .box-in .line-10 {
+  background-color: #eb8f95;
+  width: 150%;
+  height: 8px;
+  opacity: 0.2;
+  position: absolute;
+  right: -15px;
+  bottom: 60%;
+  transform: rotate(72deg);
+}
+.container .square {
+  width: 200px;
+  height: 200px;
+  border: 3px solid #f8b5b9;
+  opacity: 0.5;
+  border-radius: 40px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.container .square-1 {
+  animation: square-round 5s linear 0s infinite;
+}
+.container .square-2 {
+  animation: square-round 5s linear 0.8s infinite;
+}
+.container .square-3 {
+  animation: square-round 5s linear 1.6s infinite;
+}
+.container .square-4 {
+  animation: square-round 5s linear 2.3s infinite;
+}
+.container .big-star {
+  background-image: url(../img/1234.png);
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+  display: none;
+  position: absolute;
+  opacity: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: star-big 7s linear 3s infinite;
+}
+.container .shadow {
+  background-color: rgba(233, 127, 132, 0.2862745098);
+  opacity: 0.6;
+  width: 130px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 20px rgba(233, 127, 132, 0.2862745098);
+  position: absolute;
+  left: calc(50% - 65px);
+  bottom: 30%;
+  filter: blur(2px);
+  animation: shadow-1 3s linear 0.3s infinite;
+}
+.container .loading {
+  background-color: #fdd9db;
+  border: 1px solid #e7969a;
+  border-radius: 5px;
+  width: 500px;
+  height: 25px;
+  position: absolute;
+  left: calc(50% - 250px);
+  top: 78%;
+  overflow: hidden;
+}
+.container .loading:hover {
+  transform: scale(1.2);
+}
+.container .loading:hover .load-run {
+  animation-play-state: paused;
+}
+.container .loading:hover .witch-run {
+  background-image: url(../img/IMG_0332.GIF);
+  animation-play-state: paused;
+}
+.container .loading .load-run {
+  background-color: rgba(255, 178, 182, 0.7764705882);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  animation: load-run 10s ease-in-out 0s infinite;
+}
+.container .loading .witch-run {
+  background-image: url(../img/IMG_0333.GIF);
+  width: 25px;
+  height: 100%;
+  background-size: cover;
+  opacity: 0.8;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: witch 10s ease-in-out 0s infinite;
+}
+.container .load-text {
+  width: 250px;
+  height: 20px;
+  position: absolute;
+  left: calc(50% - 125px);
+  top: 85%;
+  display: flex;
+  justify-content: space-between;
+}
+.container .load-text h3 {
+  color: #dc868b;
+  margin: 0;
+  animation: bounce 1s cubic-bezier(0.05, 0, 0.2, 1) infinite alternate;
+}
+.container .load-text .l {
+  animation-delay: 0s;
+}
+.container .load-text .o {
+  animation-delay: 0.1s;
+}
+.container .load-text .a {
+  animation-delay: 0.2;
+}
+.container .load-text .d {
+  animation-delay: 0.3s;
+}
+.container .load-text .i {
+  animation-delay: 0.4s;
+}
+.container .load-text .n {
+  animation-delay: 0.5s;
+}
+.container .load-text .g {
+  animation-delay: 0.6s;
+}
+.container .load-text .dot-1 {
+  animation-delay: 0.7s;
+}
+.container .load-text .dot-2 {
+  animation-delay: 0.8s;
+}
+.container .load-text .dot-3 {
+  animation-delay: 0.9s;
+}/*# sourceMappingURL=loading-hw.css.map */
